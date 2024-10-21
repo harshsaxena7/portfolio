@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh Saxena - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styling */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Vibrant Colors */
+    :root {
+      --primary-color: #00bcd4; /* Teal */
+      --secondary-color: #ff4081; /* Pink */
+      --accent-color: #ffeb3b; /* Yellow */
+      --background-color: #f9f9f9;
+      --text-color: #333;
+    }
+
+    /* Header Section */
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      animation: slideIn 1.5s ease;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+      border: 5px solid white;
+      animation: zoomIn 1.5s ease-in-out;
+      transition: transform 0.5s ease;
+    }
+
+    .profile-pic:hover {
+      transform: rotate(360deg);
+    }
+
+    header .contact-info a {
+      color: var(--accent-color);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header .contact-info a:hover {
+      color: white;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 15px;
+      z-index: 1000;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 20px;
+      background-color: var(--background-color);
+      animation: fadeInUp 2s ease;
+    }
+
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      color: var(--secondary-color);
+      margin-bottom: 40px;
+      position: relative;
+      animation: slideIn 1.5s ease;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Cards Styling for Skills, Experience, Projects */
+    .skills, .experience, .projects, .education, .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      animation: slideUp 2s ease-in-out;
+    }
+
+    .skills div, .experience div, .projects div, .education div, .certifications div {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .skills div:hover, .experience div:hover, .projects div:hover, .education div:hover, .certifications div:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Photo from Harsh Saxena.jpg" alt="Harsh Saxena" class="profile-pic">
+    <h1>Harsh Saxena</h1>
+    <div class="contact-info">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Leetcode</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="content">
+      <p>Backend Web Developer with expertise in Java, Spring Boot, Node.js, and REST APIs, with experience in building scalable backend servers and web applications. Proficient in MongoDB, Docker, and MySQL with a passion for solving logical problems and optimizing performance. Seeking to leverage my skills in a dynamic environment to develop impactful solutions.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Technical Skills</h2>
+    <div class="content">
+      <div><strong>Languages:</strong> Java, C, C++, JavaScript, Node.js, Core Java, DSA</div>
+      <div><strong>Backend:</strong> Spring Boot, Node.js, REST APIs, Hibernate</div>
+      <div><strong>Frontend:</strong> JSP, JSTL, HTML, CSS, JavaScript</div>
+      <div><strong>Databases:</strong> MySQL, MongoDB</div>
+      <div><strong>DevOps:</strong> Docker</div>
+      <div><strong>Tools:</strong> Git, Render, Razorpay Integration, Google OAuth2</div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2>Work Experience</h2>
+    <div class="content">
+      <div><strong>Web Developer</strong><br>Trigent Software | Bengaluru (Remote) | Jul 2024 - Aug 2024</div>
+      <div><strong>Backend Developer Intern</strong><br>Tracklyf | Hyderabad (Remote) | Aug 2024 - Present</div>
+      <div><strong>Backend Developer Trainee</strong><br>Blockchain Research Lab | Ghaziabad | Sept 2022 - Dec 2022</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="content">
+      <div><strong>Registration Site</strong><br>Technologies: Node.js, REST APIs, MongoDB, Passport, Razorpay</div>
+      <div><strong>To-Do List Backend Server</strong><br>Technologies: Node.js, Express, JavaScript, MongoDB</div>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <div class="content">
+      <div><strong>Ajay Kumar Garg Engineering College</strong><br>Bachelor of Technology in Computer Science | 2021 - 2025 | CGPA: 7.5</div>
+      <div><strong>Bishop Conrad Senior Secondary School</strong><br>Intermediate | 2019 - 2020 | Percentage: 93%</div>
+    </div>
+  </section>
+
+  <section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <div class="content">
+      <div><strong>Full Stack Java Developer</strong> – Udemy</div>
+      <div><strong>Core Java</strong> – Infosys Springboard</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Harsh Saxena</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
